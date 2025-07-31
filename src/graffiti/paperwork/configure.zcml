@@ -1,0 +1,29 @@
+<configure
+        xmlns="http://namespaces.zope.org/zope"
+        xmlns:five="http://namespaces.zope.org/five"
+        xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+        i18n_domain="graffiti.paperwork">
+
+    <five:registerPackage package="." initialize=".initialize"/>
+
+    <include package=".rest" />
+
+    <genericsetup:registerProfile
+            name="default"
+            title="graffiti.paperwork"
+            directory="profiles/default"
+            description="Installs the graffiti.paperwork package"
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+            post_handler="graffiti.paperwork.setuphandlers.post_install"
+    />
+
+    <genericsetup:registerProfile
+            name="uninstall"
+            title="graffiti.paperwork (uninstall)"
+            directory="profiles/uninstall"
+            description="Uninstalls the graffiti.paperwork add-on."
+            provides="Products.GenericSetup.interfaces.EXTENSION"
+            post_handler="graffiti.paperwork.setuphandlers.uninstall"
+    />
+
+</configure>
