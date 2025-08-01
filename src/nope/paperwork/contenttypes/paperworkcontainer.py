@@ -4,13 +4,13 @@ from zope.interface import implementer
 
 
 class INopePaperWorkContainer(model.Schema):
-    """Schema for NopePaperWork content type"""
+    """Schema for NopePaperWorkContainer content type"""
 
     pass
 
 
 @implementer(INopePaperWorkContainer)
-class NopePaperWork(Container):
-    """NopePaperWork content type for storing files"""
+class NopePaperWorkContainer(Container):
+    """NopePaperWorkContainer content type for storing files"""
 
     pass
