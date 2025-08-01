@@ -9,7 +9,7 @@ class INopePaperWorkContainer(model.Schema):
     pass
 
 
-@implementer(INopePaperWork)
+@implementer(INopePaperWorkContainer)
 class NopePaperWork(Container):
     """NopePaperWork content type for storing files"""
 
