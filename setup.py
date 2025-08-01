@@ -5,9 +5,9 @@ from pkg_resources import Requirement, parse_version
 from setuptools import find_packages, setup
 
 # Package metadata
-NAME = "graffiti.paperwork"
+NAME = "nope.paperwork"
 DESCRIPTION = ""
-URL = "https://github.com/Open-Community-Building/graffiti.paperwork/"
+URL = "https://github.com/Open-Community-Building/nope.paperwork/"
 EMAIL = "maikroeder@gmail.com"
 AUTHOR = "Maik Röder"
 REQUIRES_PYTHON = "~=3.8"
@@ -60,7 +60,7 @@ setup(
     packages=find_packages("src"),
     package_dir={"": "src"},
     namespace_packages=[
-        "graffiti",
+        "nope",
     ],
     include_package_data=True,
     zip_safe=False,
