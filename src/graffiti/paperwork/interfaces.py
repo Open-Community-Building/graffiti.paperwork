@@ -1,7 +1,7 @@
 from zope.interface import Interface
 
 
-class IGraffitiPaperWorkLayer(Interface):
+class INopePaperWorkLayer(Interface):
     """Marker interface that defines a ZTK browser layer. We can reference
     this in the 'layer' attribute of ZCML <browser:* /> directives to ensure
     the relevant registration only takes effect when this theme is installed.

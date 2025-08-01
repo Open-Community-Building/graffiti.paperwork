@@ -1,5 +1,5 @@
 """
-The graffiti.paperwork tool provides a service to create storage spaces via REST API.
+The nope.paperwork tool provides a service to create storage spaces via REST API.
 """
 
 from typing import Dict
@@ -50,9 +50,9 @@ class PaperWorkApi(BrowserView):
             self.paperwork_container_id = name
         elif len(self.params) == 1:
             portal = api.portal.get()
-            if not portal["paperwork"][name].portal_type == "GraffitiPaperWork":
+            if not portal["paperwork"][name].portal_type == "NopePaperWork":
                 raise BadRequest(
-                    "No GraffitiPaperWork content type with id %s in Folder /paperwork"
+                    "No NopePaperWork content type with id %s in Folder /paperwork"
                     % name
                 )
             self.paperwork_uid = name
@@ -175,7 +175,7 @@ class PaperWorkApi(BrowserView):
 
         uuid = framework.helper.generate_uuid()
 
-        portal_type = "GraffitiPaperWork"
+        portal_type = "NopePaperWork"
         portal = api.portal.get()
 
         with sudo.role_context("Manager", portal):
@@ -184,7 +184,7 @@ class PaperWorkApi(BrowserView):
                 portal_type,
                 id=uuid,
                 title=data["title"],
-                document_type="GraffitiPaperWork",
+                document_type="NopePaperWork",
             )
             transaction.commit()
 
@@ -540,7 +540,7 @@ class PaperWorkApi(BrowserView):
         if "title" not in data:
             raise BadRequest("JSON payload needs to contain a title")
         brains = []
-        for brain in self.catalog.searchResults({"document_type": "GraffitiPaperWork"}):
+        for brain in self.catalog.searchResults({"document_type": "NopePaperWork"}):
             if data["title"] == brain.Title:
                 brains.append(brain)
         wftool = getToolByName(self.context, "portal_workflow")
@@ -573,7 +573,7 @@ class PaperWorkApi(BrowserView):
             raise BadRequest("JSON payload needs to contain a title")
 
         matches = []
-        for brain in self.catalog.searchResults({"document_type": "GraffitiPaperWork"}):
+        for brain in self.catalog.searchResults({"document_type": "NopePaperWork"}):
             jaro_winkler = Levenshtein.jaro_winkler(data["title"], brain.Title)
             matches.append((jaro_winkler, brain))
         matches.sort(reverse=True)

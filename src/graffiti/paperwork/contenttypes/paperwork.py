@@ -3,14 +3,14 @@ from plone.supermodel import model
 from zope.interface import implementer
 
 
-class IGraffitiPaperWork(model.Schema):
-    """Schema for GraffitiPaperWork content type"""
+class INopePaperWork(model.Schema):
+    """Schema for NopePaperWork content type"""
 
     pass
 
 
-@implementer(IGraffitiPaperWork)
-class GraffitiPaperWork(Container):
-    """GraffitiPaperWork content type for storing files"""
+@implementer(INopePaperWork)
+class NopePaperWork(Container):
+    """NopePaperWork content type for storing files"""
 
     pass

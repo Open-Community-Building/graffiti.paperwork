@@ -1,20 +1,20 @@
-from graffiti.testing.testing import GraffitiTestingLayer
+from nope.testing.testing import NopeTestingLayer
 
 from plone.app.testing import FunctionalTesting
 from plone.app.testing import IntegrationTesting
 from plone.testing.zope import WSGI_SERVER_FIXTURE
 
 
-class GraffitiPaperWorkLayer(GraffitiTestingLayer):
+class NopePaperWorkLayer(NopeTestingLayer):
     additional_products_to_import = []
-    additional_products_to_install = ["graffiti.paperwork"]
+    additional_products_to_install = ["nope.paperwork"]
 
 
-GRAFFITI_PAPERWORK_FIXTURE = GraffitiPaperWorkLayer()
-GRAFFITI_PAPERWORK_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(GRAFFITI_PAPERWORK_FIXTURE,), name="GraffitiPaperWorkLayer:Integration"
+NOPE_PAPERWORK_FIXTURE = NopePaperWorkLayer()
+NOPE_PAPERWORK_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(NOPE_PAPERWORK_FIXTURE,), name="NopePaperWorkLayer:Integration"
 )
-GRAFFITI_PAPERWORK_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(GRAFFITI_PAPERWORK_FIXTURE, WSGI_SERVER_FIXTURE),
-    name="GraffitiPaperWorkLayer:Functional",
+NOPE_PAPERWORK_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(NOPE_PAPERWORK_FIXTURE, WSGI_SERVER_FIXTURE),
+    name="NopePaperWorkLayer:Functional",
 )

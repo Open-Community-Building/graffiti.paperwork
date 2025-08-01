@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<object name="GraffitiPaperWork" meta_type="Dexterity FTI"
-        i18n:domain="graffiti.paperwork"
+<object name="NopePaperWork" meta_type="Dexterity FTI"
+        i18n:domain="nope.paperwork"
         xmlns:i18n="http://xml.zope.org/namespaces/i18n">
-    <property name="title" i18n:translate="GraffitiPaperWork">GraffitiPaperWork</property>
+    <property name="title" i18n:translate="NopePaperWork">NopePaperWork</property>
     <property name="description" i18n:translate="">.</property>
-    <property name="icon_expr">string:${portal_url}/++theme++graffiti.contenttypes/icon-contenttype-graffitipaperwork.png</property>
-    <property name="factory">GraffitiPaperWork</property>
-    <property name="add_view_expr">string:${folder_url}/++add++GraffitiPaperWork</property>
+    <property name="icon_expr">string:${portal_url}/++theme++nope.contenttypes/icon-contenttype-nopepaperwork.png</property>
+    <property name="factory">NopePaperWork</property>
+    <property name="add_view_expr">string:${folder_url}/++add++NopePaperWork</property>
     <property name="link_target"/>
     <property name="immediate_view">view</property>
     <property name="global_allow">True</property>
@@ -20,8 +20,8 @@
     </property>
     <property name="default_view_fallback">False</property>
     <property name="add_permission">cmf.AddPortalContent</property>
-    <property name="klass">graffiti.paperwork.contenttypes.paperwork.GraffitiPaperWork</property>
-    <property name="schema">graffiti.paperwork.contenttypes.paperwork.IGraffitiPaperWork</property>
+    <property name="klass">nope.paperwork.contenttypes.paperwork.NopePaperWork</property>
+    <property name="schema">nope.paperwork.contenttypes.paperwork.INopePaperWork</property>
     <property name="behaviors" purge="False">
     </property>
 

@@ -7,7 +7,7 @@ def post_install(context):
 
 def uninstall(context):
     """Uninstall script"""
-    # Keep this list in sync with 'metadata.xml' of graffiti.paperwork
-    uninstall_products = ["graffiti.paperwork"]
-    uninstall_products = list(set(uninstall_products) - {"graffiti.paperwork"})
+    # Keep this list in sync with 'metadata.xml' of nope.paperwork
+    uninstall_products = ["nope.paperwork"]
+    uninstall_products = list(set(uninstall_products) - {"nope.paperwork"})
     installer().uninstall_products(uninstall_products)

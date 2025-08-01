@@ -2,8 +2,8 @@ import logging
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory("graffiti.paperwork")
-logger = logging.getLogger("graffiti.paperwork")
+_ = MessageFactory("nope.paperwork")
+logger = logging.getLogger("nope.paperwork")
 
 
 # noinspection PyUnusedLocal
