@@ -56,7 +56,7 @@ setup(
     author=AUTHOR,
     author_email=EMAIL,
     url=URL,
-    license="proprietary",
+    license="BSD 3-Clause License",
     packages=find_packages("src"),
     package_dir={"": "src"},
     namespace_packages=[
